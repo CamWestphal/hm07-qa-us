@@ -27,7 +27,7 @@ test('status should be 200', async () => {
 	expect(actualStatusCode).toBe(200);
 });
 
-test('Request body should be orange juice...', async () => {
+test('Request body should be ok true', async () => {
 	let actualResponseBody;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
@@ -41,5 +41,5 @@ test('Request body should be orange juice...', async () => {
 	} catch (error) {
 		console.error(error);
 	}
-	expect(actualResponseBody.name).toBe("Orange Juice - Cold-Pressed, No Added Sugar, Preservative Free");
+	expect(actualResponseBody['ok']).toBe(Boolean(true));
 });
