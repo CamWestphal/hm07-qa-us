@@ -18,6 +18,6 @@ the expect.toBe function verifies that we are getting the right codes when we ru
 
 to run the tests make sure the delete and put enpoints match up with the id created for the kits
 
-to run the scripts use the cmd line and do 'npm install' to install the packages needed for this test.
+to run the scripts use the cmd line in the folder and do 'npm install' to install the packages needed for this test.
 
 to run the tests use 'npx jest tests/deleteHandlers.test.js' and change the file name when you run a different script.
