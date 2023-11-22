@@ -11,30 +11,10 @@ const putRequestBody = {
 	"name": "new cart"
 }
 
-//this is to create the kit necessary for the test
-const postRequestBody = {
-		"name": "My set",
-		"card": {
-			"id": 1,
-			"name": "For the situation"
-		},
-		"productsList": null,
-		"id": 7,
-		"productsCount": 0
-}
-
 test('status should be 200', async () => {
 	let actualStatusCode;
     try {
-		//creating the kit before the test to make sure that the endpoint for the
-		const createKit = await fetch(`${config.API_URL}/api/v1/kits`, {
-			method: 'POST',
-			headers: {
-			'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(postRequestBody)
-		});
-		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/3`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
@@ -51,7 +31,7 @@ test('status should be 200', async () => {
 test('Request body should be ok true', async () => {
 	let actualResponseBody;
     try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/3`, {
 			method: 'PUT',
 			headers: {
 			'Content-Type': 'application/json'
